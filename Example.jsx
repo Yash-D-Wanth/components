@@ -1,6 +1,6 @@
-function Example({name,data}){
+function Example({Person}){
     return(
-        <div>orewa {name} who will became {data}</div>
+        <div>orewa {Person.name} who will became {Person.aim}</div>
     )
 }
 export default Example
