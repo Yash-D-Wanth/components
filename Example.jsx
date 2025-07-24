@@ -1,6 +1,7 @@
-function Example({Person}){
+function Example(props){
+    let {Person}=props;
     return(
-        <div>orewa {Person.name} who will became {Person.aim}</div>
+        <div>orewa {props.Person.name} who will became {props.Person.aim} his age {props.Person.age}</div>
     )
 }
 export default Example
