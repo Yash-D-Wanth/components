@@ -1,28 +1,17 @@
-import { useState } from "react"
-function Example(){
-    const [num,setValue]=useState(1);
-            const add=()=>{
-                setValue((num)=>{
-                    return num+=1
-                })
-            }
-            const sub=()=>{
-                setValue((num)=>{
-                    return num-=1
-                })
-            }
-            const reset=()=>{
-                setValue((num)=>{
-                    return num==1
-                })
-            }
-    return(
-        <>
-        <h1>{num}</h1>
-        <button onClick={add}>+</button>
-        <button onClick={reset}>reset</button>
-        <button onClick={sub}>-</button>
-        </>
-    )
+function Example({ Person }) {
+  //   .message="there"
+  return (
+    <>
+      <h1>
+        Hello, this is an example {Person.name}{" "}
+        <ul>
+          {Person.hobbies.map(hobby => (
+            <li key={hobby}>{hobby}</li>
+          ))}
+        </ul>
+      </h1>
+      <h1>{Person.age}</h1>
+    </>
+  );
 }
-export default Example  
+export default Example;
